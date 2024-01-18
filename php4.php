@@ -1,5 +1,9 @@
 <?php
 
+//TRACCIA 1
+
+/*
+
 class Continent {
     public $nameContinent;
 
@@ -62,4 +66,42 @@ $myLocation = new Street("Europa", "Italia", "Puglia", "Ba", "Bari", "Via Napoli
 
 // Richiamo del metodo
 echo $myLocation->getMyCurrentLocation();
+
+*/
+
+//TRACCIA 3
+
+class Car {
+    private $num_telaio;
+
+    public function __construct($num_telaio) {
+        $this->num_telaio = $num_telaio;
+    }
+}
+
+class Fiat extends Car {
+    protected $license;
+    protected $name;
+
+    public function __construct($num_telaio, $license, $name) {
+        parent::__construct($num_telaio);
+        $this->license = $license;
+        $this->name = $name;
+    }
+
+    public function printCarDetails() {
+        echo "La mia macchina è {$this->name}, con targa {$this->license} e numero di telaio {$this->num_telaio}.";
+    }
+}
+
+// Esempio di utilizzo
+$car = new Fiat("1234", "ND123OJ", "Opel");
+$car->printCarDetails();
+
+// Output richiesto
+var_dump($car);
+
+
+
+
 
