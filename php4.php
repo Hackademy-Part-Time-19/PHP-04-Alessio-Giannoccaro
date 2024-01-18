@@ -1,6 +1,5 @@
 <?php
 
-
 class Continent {
     public $nameContinent;
 
@@ -59,7 +58,8 @@ class Street extends City {
 }
 
 // Creazione di un oggetto
-$myLocation = new Street("Europa", "Italia", "Puglia", "Ba", "Bari", "Strada San Giorgio Martire 2D");
+$myLocation = new Street("Europa", "Italia", "Puglia", "Ba", "Bari", "Via Napoli 315");
 
 // Richiamo del metodo
 echo $myLocation->getMyCurrentLocation();
+
